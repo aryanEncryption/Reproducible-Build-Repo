@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 
-namespace MyProject
+using System.Reflection;
+using System.Runtime.InteropServices;
+
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        Console.WriteLine("Hello world! Little change");
     }
 }
