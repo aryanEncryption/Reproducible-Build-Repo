@@ -3,6 +3,15 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- dotnet clean & dotnet build & certutil -hashfile bin\Debug\net7.0\reproducible_dotnet.exe SHA256 -->
+
+  <PropertyGroup>
+    <Deterministic>true</Deterministic>
+    <!-- https://stackoverflow.com/questions/65935784/is-it-possible-to-remove-the-full-paths-from-net-assemblies-created-with-dotnet -->
+    <PathMap>$(MSBuildThisFileDirectory)=./</PathMap>
+  </PropertyGroup>
 </Project>
